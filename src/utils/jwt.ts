@@ -34,13 +34,13 @@ export default {
                     ClientError.unauthorized(res, "You have not permission to get the data");
                     return;
                 }
-                delete decoded?.iat;
-                delete decoded?.exp;
+                // delete decoded?.iat;
+                // delete decoded?.exp;
                 req.query.JWTdecoded = decoded;
             });
             if (!blad) {
                 next();
             }
     
-        }
+    }
 }
